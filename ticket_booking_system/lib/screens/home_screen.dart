@@ -15,6 +15,9 @@ class HomeScreen extends StatelessWidget {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
             child: Column(children: [
+              const SizedBox(
+                height: 40,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -47,9 +50,6 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(
-                height: 20,
-              ),
               Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
@@ -71,7 +71,7 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 20,
+                height: 15,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -92,13 +92,35 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
+              SingleChildScrollView(
+                padding: const EdgeInsets.only(left: 0),
+                scrollDirection: Axis.horizontal,
+                child: Row(children: const [TicketView(), TicketView()]),
+              ),
+              const SizedBox(
+                height: 75,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Hotels",
+                    style: Styles.headLineStyle2,
+                  ),
+                  InkWell(
+                    onTap: () {
+                      print("You are Pressed");
+                    },
+                    child: Text(
+                      "View All",
+                      style:
+                          Styles.textStyle.copyWith(color: Styles.primaryColor),
+                    ),
+                  ),
+                ],
+              ),
             ]),
           ),
-          SingleChildScrollView(
-            padding: const EdgeInsets.only(left: 20),
-            scrollDirection: Axis.horizontal,
-            child: Row(children: const [TicketView(), TicketView()]),
-          )
         ],
       ),
     );
