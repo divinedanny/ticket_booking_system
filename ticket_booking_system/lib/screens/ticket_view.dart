@@ -170,19 +170,22 @@ class TicketView extends StatelessWidget {
             child: Column(children: [
               Row(
                 children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "1 May",
-                        style: Styles.textStyle.copyWith(color: Colors.white),
-                      ),
-                      Text(
-                        "Date",
-                        style:
-                            Styles.headLineStyle4.copyWith(color: Colors.white),
-                      ),
-                    ],
+                  SizedBox(
+                    width: 80,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "1 May",
+                          style: Styles.textStyle.copyWith(color: Colors.white),
+                        ),
+                        Text(
+                          "Date",
+                          style: Styles.headLineStyle4
+                              .copyWith(color: Colors.white),
+                        ),
+                      ],
+                    ),
                   ),
                   const Spacer(),
                   Column(

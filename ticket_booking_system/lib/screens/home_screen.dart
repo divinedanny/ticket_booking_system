@@ -73,54 +73,67 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(
                 height: 15,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    "Upcoming Flights",
-                    style: Styles.headLineStyle2,
-                  ),
-                  InkWell(
-                    onTap: () {
-                      print("You are Pressed");
-                    },
-                    child: Text(
-                      "View All",
-                      style:
-                          Styles.textStyle.copyWith(color: Styles.primaryColor),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Upcoming Flights",
+                      style: Styles.headLineStyle2,
                     ),
-                  ),
-                ],
-              ),
-              SingleChildScrollView(
-                padding: const EdgeInsets.only(left: 0),
-                scrollDirection: Axis.horizontal,
-                child: Row(children: const [TicketView(), TicketView()]),
-              ),
-              const SizedBox(
-                height: 75,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    "Hotels",
-                    style: Styles.headLineStyle2,
-                  ),
-                  InkWell(
-                    onTap: () {
-                      print("You are Pressed");
-                    },
-                    child: Text(
-                      "View All",
-                      style:
-                          Styles.textStyle.copyWith(color: Styles.primaryColor),
+                    InkWell(
+                      onTap: () {
+                        print("You are Pressed");
+                      },
+                      child: Text(
+                        "View All",
+                        style: Styles.textStyle
+                            .copyWith(color: Styles.primaryColor),
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ]),
           ),
+          const SizedBox(
+            width: 15,
+          ),
+          SingleChildScrollView(
+            padding: const EdgeInsets.only(left: 0),
+            scrollDirection: Axis.horizontal,
+            child: Row(children: const [TicketView(), TicketView()]),
+          ),
+          const SizedBox(
+            height: 15,
+          ),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 15),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Hotels",
+                  style: Styles.headLineStyle2,
+                ),
+                InkWell(
+                  onTap: () {
+                    print("You are Pressed");
+                  },
+                  child: Text(
+                    "View All",
+                    style:
+                        Styles.textStyle.copyWith(color: Styles.primaryColor),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(
+            height: 15,
+          ),
+          HomeScreen(),
         ],
       ),
     );
